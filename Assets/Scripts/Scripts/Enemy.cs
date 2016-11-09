@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour {
 
 	protected virtual void Start () {
 		print ("START ENENMY!");
-		if(patrolPoints==null) {
+		if(patrolPoints==null ||  patrolPoints[0]==null) {
 			print ("FIND POINTS...");
 			patrolPoints = new List<GameObject>();
 			foreach(GameObject go in GameObject.FindGameObjectsWithTag("PatrolPoints")) {
